@@ -1,0 +1,22 @@
+﻿@model HRMS.Core.Entities.EmployeeEntity
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4 style="text-align:center"> Create New Employee</h4>
+<hr />
+<div class="row">
+    @{
+        Html.RenderPartial("_ViewForEditCreate");
+    }
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

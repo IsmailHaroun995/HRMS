@@ -1,0 +1,23 @@
+﻿@model HRMS.Core.Entities.EmployeeEntity
+
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h4>Delete</h4>
+<h4> Are you want to delete ?</h4>
+
+<div>
+    <hr />
+    @{
+        Html.RenderPartial("_ViewForDetailsAndDelete");
+    }
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-list">Back to List</a>
+    </form>
+</div>

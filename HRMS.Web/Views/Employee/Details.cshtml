@@ -1,0 +1,19 @@
+﻿@model HRMS.Core.Entities.EmployeeEntity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Details</h4>
+
+<div>
+    <hr />
+    @{
+        Html.RenderPartial("_ViewForDetailsAndDelete");
+    }
+
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id">Edit</a> 
+    <a asp-action="Index" class="btn btn-light">Back to List</a>
+</div>

@@ -1,0 +1,21 @@
+﻿@model HRMS.Core.Entities.EmployeeEntity
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Edit</h4>
+<hr />
+<div class="row">
+    @{
+        Html.RenderPartial("_ViewForEditCreate");
+    }
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
